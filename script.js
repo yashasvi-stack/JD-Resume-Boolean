@@ -2,7 +2,7 @@ async function generate() {
   const jd = document.getElementById("jd").value.trim();
   if (!jd) return alert("Paste JD first");
 
-  const res = await fetch("https://vikramautomation.app.n8n.cloud/webhook/jd-boolean", {
+  const res = await fetch("https://vikramautomation.app.n8n.cloud/webhook/jd-boolean1", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ jd })
@@ -23,7 +23,7 @@ async function generateFromResume() {
   formData.append("resume", fileInput.files[0]);
   formData.append("source", "resume");
 
-  const res = await fetch("https://vikramautomation.app.n8n.cloud/webhook/jd-boolean", {
+  const res = await fetch("https://vikramautomation.app.n8n.cloud/webhook/jd-boolean1", {
     method: "POST",
     body: formData
   });
