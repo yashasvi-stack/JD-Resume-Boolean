@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
   font-family: "Segoe UI", sans-serif;
 }
@@ -121,4 +121,179 @@ button:hover {
 
 .hidden {
   display: none;
+} */
+
+
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.container {
+  width: 95%;
+  max-width: 1150px;
+  padding: 32px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.glass {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 30px 70px rgba(0,0,0,.45);
+}
+
+.input-section {
+  margin-bottom: 30px;
+}
+
+.label {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: 15px;
+  margin-top: 6px;
+  border-radius: 14px;
+  border: none;
+  font-size: 15px;
+  outline: none;
+  resize: vertical;
+}
+
+.file-row {
+  margin-top: 14px;
+}
+
+.file-label {
+  font-size: 13px;
+  opacity: .85;
+  cursor: pointer;
+}
+
+.file-label input {
+  display: block;
+  margin-top: 6px;
+}
+
+.btn-row {
+  margin-top: 18px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 14px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+  cursor: pointer;
+  transition: all .25s ease;
+  box-shadow: 0 12px 35px rgba(0,114,255,.45);
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+.refresh-btn {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #000;
+}
+
+.section-title {
+  margin: 30px 0 10px;
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: rgba(255,255,255,.12);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.card h3 {
+  font-size: 13px;
+  margin-bottom: 6px;
+  opacity: .75;
+}
+
+.card pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 14px;
+}
+
+.highlight {
+  border: 1px solid rgba(0,255,255,.25);
+}
+
+.final {
+  margin-top: 30px;
+  background: linear-gradient(145deg, rgba(0,255,255,.25), rgba(0,114,255,.25));
+}
+
+.final h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.final pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.copy-btn {
+  margin-top: 15px;
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  color: #000;
+}
+
+.hidden {
+  display: none;
+}
+
+.fade-in {
+  animation: fadeIn .6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
