@@ -98,19 +98,20 @@
 <body>
   <div class="container">
 
+    <!-- Header -->
     <header class="header">
       <h1>JD → Boolean Generator</h1>
-      <p class="subtitle">AI-powered Boolean search builder for Naukri & ATS</p>
+      <p>Generate powerful Naukri Boolean strings from JD or Resume</p>
     </header>
 
     <!-- Input Section -->
-    <div class="input-section glass">
-      <label class="label">Job Description</label>
+    <section class="input-section">
+      <label>Job Description</label>
       <textarea id="jd" placeholder="Paste Job Description here..."></textarea>
 
       <div class="file-row">
         <label class="file-label">
-          Upload Resume (optional)
+          Upload Resume
           <input type="file" id="resumeFile" accept=".pdf,.doc,.docx" />
         </label>
       </div>
@@ -120,66 +121,37 @@
         <button onclick="generateFromResume()">Generate from Resume</button>
         <button class="refresh-btn" onclick="refreshUI()">Refresh</button>
       </div>
-    </div>
+    </section>
 
     <!-- Output Section -->
-    <div id="output" class="hidden fade-in">
+    <section id="output" class="output hidden">
 
-      <h2 class="section-title">Extracted Information</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Role</h3>
-          <pre id="role"></pre>
-        </div>
-
-        <div class="card">
-          <h3>Skills</h3>
-          <pre id="skills"></pre>
-        </div>
-
-        <div class="card">
-          <h3>Experience</h3>
-          <pre id="experience"></pre>
-        </div>
-
-        <div class="card">
-          <h3>Location</h3>
-          <pre id="location"></pre>
-        </div>
-      </div>
-
-      <h2 class="section-title">Boolean Components</h2>
+      <h2>Extracted Information</h2>
 
       <div class="grid">
-        <div class="card highlight">
-          <h3>Role Boolean</h3>
-          <pre id="role_boolean"></pre>
-        </div>
-
-        <div class="card highlight">
-          <h3>Skills Boolean</h3>
-          <pre id="skills_boolean"></pre>
-        </div>
-
-        <div class="card highlight">
-          <h3>Experience Boolean</h3>
-          <pre id="experience_boolean"></pre>
-        </div>
-
-        <div class="card highlight">
-          <h3>Location Boolean</h3>
-          <pre id="location_boolean"></pre>
-        </div>
+        <div class="card"><h3>Role</h3><pre id="role"></pre></div>
+        <div class="card"><h3>Skills</h3><pre id="skills"></pre></div>
+        <div class="card"><h3>Experience</h3><pre id="experience"></pre></div>
+        <div class="card"><h3>Location</h3><pre id="location"></pre></div>
       </div>
 
-      <div class="final glass">
-        <h2>Final Boolean (Naukri Ready)</h2>
+      <h2>Boolean Logic</h2>
+
+      <div class="grid">
+        <div class="card"><h3>Role Boolean</h3><pre id="role_boolean"></pre></div>
+        <div class="card"><h3>Skills Boolean</h3><pre id="skills_boolean"></pre></div>
+        <div class="card"><h3>Experience Boolean</h3><pre id="experience_boolean"></pre></div>
+        <div class="card"><h3>Location Boolean</h3><pre id="location_boolean"></pre></div>
+      </div>
+
+      <div class="final">
+        <h3>Final Boolean (Naukri Ready)</h3>
         <pre id="final_boolean"></pre>
         <button class="copy-btn" onclick="copyBoolean()">Copy Boolean</button>
       </div>
 
-    </div>
+    </section>
+
   </div>
 
   <script src="script.js"></script>

@@ -127,13 +127,13 @@ button:hover {
 
 * {
   box-sizing: border-box;
-  font-family: "Segoe UI", system-ui, sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,87 +141,92 @@ body {
 }
 
 .container {
-  width: 95%;
-  max-width: 1150px;
-  padding: 32px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 30px;
 }
 
+/* ---------- Header ---------- */
 .header {
   text-align: center;
-  margin-bottom: 25px;
-}
-
-.subtitle {
-  font-size: 14px;
-  opacity: 0.75;
-}
-
-.glass {
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(18px);
-  border-radius: 20px;
-  padding: 25px;
-  box-shadow: 0 30px 70px rgba(0,0,0,.45);
-}
-
-.input-section {
   margin-bottom: 30px;
 }
 
-.label {
-  font-size: 13px;
+.header p {
+  opacity: 0.75;
+  margin-top: 6px;
+}
+
+/* ---------- Sections ---------- */
+.input-section,
+.output {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px);
+  border-radius: 22px;
+  padding: 25px;
+  box-shadow: 0 25px 60px rgba(0,0,0,.45);
+  margin-bottom: 30px;
+}
+
+label {
+  font-size: 14px;
   opacity: 0.8;
 }
 
+/* ---------- Textarea ---------- */
 textarea {
   width: 100%;
   min-height: 160px;
+  margin-top: 8px;
   padding: 15px;
-  margin-top: 6px;
   border-radius: 14px;
   border: none;
+  resize: vertical;
   font-size: 15px;
   outline: none;
-  resize: vertical;
 }
 
+/* ---------- File Upload ---------- */
 .file-row {
-  margin-top: 14px;
+  margin-top: 15px;
 }
 
 .file-label {
-  font-size: 13px;
-  opacity: .85;
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.15);
   cursor: pointer;
 }
 
 .file-label input {
-  display: block;
-  margin-top: 6px;
+  display: none;
 }
 
+/* ---------- Buttons ---------- */
 .btn-row {
-  margin-top: 18px;
+  margin-top: 20px;
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 button {
-  padding: 14px 28px;
-  font-size: 14px;
+  padding: 14px 30px;
+  font-size: 15px;
   font-weight: 600;
   border: none;
   border-radius: 30px;
   background: linear-gradient(135deg, #00c6ff, #0072ff);
   color: #fff;
   cursor: pointer;
-  transition: all .25s ease;
-  box-shadow: 0 12px 35px rgba(0,114,255,.45);
+  box-shadow: 0 12px 30px rgba(0,114,255,.45);
+  transition: 0.25s ease;
 }
 
 button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px) scale(1.02);
 }
 
 .refresh-btn {
@@ -229,28 +234,25 @@ button:hover {
   color: #000;
 }
 
-.section-title {
-  margin: 30px 0 10px;
-  font-size: 16px;
-  opacity: 0.85;
-}
-
+/* ---------- Grid ---------- */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
 }
 
 .card {
   background: rgba(255,255,255,.12);
-  border-radius: 16px;
-  padding: 16px;
+  border-radius: 18px;
+  padding: 18px;
+  min-height: 120px;
 }
 
 .card h3 {
-  font-size: 13px;
+  font-size: 14px;
   margin-bottom: 6px;
-  opacity: .75;
+  opacity: 0.75;
 }
 
 .card pre {
@@ -260,23 +262,18 @@ button:hover {
   font-size: 14px;
 }
 
-.highlight {
-  border: 1px solid rgba(0,255,255,.25);
-}
-
+/* ---------- Final Boolean ---------- */
 .final {
   margin-top: 30px;
-  background: linear-gradient(145deg, rgba(0,255,255,.25), rgba(0,114,255,.25));
-}
-
-.final h2 {
-  font-size: 16px;
-  margin-bottom: 10px;
+  padding: 25px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(0,255,255,.25), rgba(0,114,255,.35));
 }
 
 .final pre {
   white-space: pre-wrap;
   overflow-wrap: anywhere;
+  font-size: 15px;
 }
 
 .copy-btn {
@@ -285,15 +282,8 @@ button:hover {
   color: #000;
 }
 
+/* ---------- Utility ---------- */
 .hidden {
   display: none;
 }
 
-.fade-in {
-  animation: fadeIn .6s ease forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
