@@ -492,3 +492,19 @@ button:hover {
   display: none;
 }
 
+.feedback {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.feedback a {
+  color: #a100ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.feedback a:hover {
+  text-decoration: underline;
+}
