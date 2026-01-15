@@ -337,11 +337,11 @@ h1 {
   letter-spacing: 0.5px;
 }
 
-h1::after {
+/* h1::after {
   content: ">";
   margin-left: 6px;
   color: #a100ff;
-}
+} */
 
 /* ===============================
    INPUT SECTION
