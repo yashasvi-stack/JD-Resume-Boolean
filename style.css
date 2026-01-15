@@ -290,6 +290,49 @@ button:hover {
 /* ===============================
    GLOBAL RESET & BASE
 ================================ */
+
+
+/* ===============================
+   THEME VARIABLES
+================================ */
+:root {
+  --bg-body: radial-gradient(circle at top, #1a1a1a, #0b0b0b 60%, #000000);
+  --bg-container: linear-gradient(180deg, rgba(20,20,20,.95), rgba(10,10,10,.95));
+  --bg-card: linear-gradient(180deg, rgba(30,30,30,.95), rgba(18,18,18,.95));
+  --bg-input: #0f0f0f;
+
+  --text-main: #ffffff;
+  --text-muted: rgba(255,255,255,.65);
+
+  --accent: #a100ff;
+  --accent-2: #5f00d8;
+
+  --btn-primary: linear-gradient(135deg, #a100ff, #5f00d8);
+  --btn-light: linear-gradient(135deg, #ffffff, #dddddd);
+}
+
+/* ===============================
+   LIGHT MODE
+================================ */
+body.light {
+  --bg-body: linear-gradient(135deg, #f5f7fa, #e4ecf4);
+  --bg-container: linear-gradient(180deg, #ffffff, #f2f4f7);
+  --bg-card: linear-gradient(180deg, #ffffff, #f6f7fb);
+  --bg-input: #ffffff;
+
+  --text-main: #111111;
+  --text-muted: #555555;
+
+  --accent: #5f00d8;
+  --accent-2: #7b2cff;
+
+  --btn-primary: linear-gradient(135deg, #7b2cff, #5f00d8);
+  --btn-light: linear-gradient(135deg, #222222, #444444);
+}
+
+/* ===============================
+   GLOBAL
+================================ */
 * {
   box-sizing: border-box;
   font-family: "Segoe UI", Inter, system-ui, sans-serif;
@@ -298,16 +341,11 @@ button:hover {
 body {
   margin: 0;
   min-height: 100vh;
-  background: radial-gradient(
-    circle at top,
-    #1a1a1a,
-    #0b0b0b 60%,
-    #000000
-  );
+  background: var(--bg-body);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--text-main);
 }
 
 /* ===============================
@@ -316,14 +354,28 @@ body {
 .container {
   width: 95%;
   max-width: 1200px;
-  background: linear-gradient(
-    180deg,
-    rgba(20, 20, 20, 0.95),
-    rgba(10, 10, 10, 0.95)
-  );
+  background: var(--bg-container);
   border-radius: 22px;
   padding: 36px;
   box-shadow: 0 40px 90px rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+
+/* ===============================
+   THEME TOGGLE
+================================ */
+.theme-toggle {
+  position: absolute;
+  top: 22px;
+  right: 26px;
+  font-size: 22px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform .2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.15);
 }
 
 /* ===============================
@@ -334,14 +386,8 @@ h1 {
   font-size: 34px;
   font-weight: 800;
   margin-bottom: 30px;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
 }
-
-/* h1::after {
-  content: ">";
-  margin-left: 6px;
-  color: #a100ff;
-} */
 
 /* ===============================
    INPUT SECTION
@@ -351,16 +397,20 @@ textarea {
   min-height: 180px;
   padding: 18px;
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255,255,255,.15);
   resize: vertical;
   font-size: 15px;
   outline: none;
-  background: #0f0f0f;
-  color: #ffffff;
+  background: var(--bg-input);
+  color: var(--text-main);
 }
 
 textarea::placeholder {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255,255,255,.45);
+}
+
+body.light textarea::placeholder {
+  color: #777;
 }
 
 .file-row {
@@ -368,7 +418,7 @@ textarea::placeholder {
 }
 
 input[type="file"] {
-  color: #ffffff;
+  color: var(--text-main);
 }
 
 /* ===============================
@@ -387,27 +437,27 @@ button {
   font-weight: 700;
   border: none;
   border-radius: 32px;
-  background: linear-gradient(135deg, #a100ff, #5f00d8);
+  background: var(--btn-primary);
   color: #ffffff;
   cursor: pointer;
-  letter-spacing: 0.4px;
-  box-shadow: 0 12px 35px rgba(161, 0, 255, 0.45);
-  transition: all 0.25s ease;
+  letter-spacing: .4px;
+  box-shadow: 0 12px 35px rgba(161, 0, 255, .45);
+  transition: all .25s ease;
 }
 
 button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 45px rgba(161, 0, 255, 0.65);
+  box-shadow: 0 16px 45px rgba(161, 0, 255, .65);
 }
 
 .refresh-btn {
-  background: linear-gradient(135deg, #ffffff, #cccccc);
+  background: var(--btn-light);
   color: #000000;
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
 
 /* ===============================
-   GRID LAYOUT
+   GRID
 ================================ */
 .grid {
   display: grid;
@@ -420,14 +470,10 @@ button:hover {
    CARDS
 ================================ */
 .card {
-  background: linear-gradient(
-    180deg,
-    rgba(30, 30, 30, 0.95),
-    rgba(18, 18, 18, 0.95)
-  );
+  background: var(--bg-card);
   border-radius: 18px;
   padding: 18px;
-  border-left: 4px solid #a100ff;
+  border-left: 4px solid var(--accent);
 }
 
 .card h3 {
@@ -435,7 +481,7 @@ button:hover {
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--text-muted);
 }
 
 .card pre {
@@ -447,7 +493,7 @@ button:hover {
 }
 
 /* ===============================
-   FINAL BOOLEAN SECTION
+   FINAL BOOLEAN
 ================================ */
 .final {
   margin-top: 30px;
@@ -455,8 +501,8 @@ button:hover {
   border-radius: 20px;
   background: linear-gradient(
     135deg,
-    rgba(161, 0, 255, 0.35),
-    rgba(95, 0, 216, 0.35)
+    rgba(161,0,255,.35),
+    rgba(95,0,216,.35)
   );
 }
 
@@ -469,7 +515,6 @@ button:hover {
 
 .final pre {
   white-space: pre-wrap;
-  word-wrap: break-word;
   overflow-wrap: anywhere;
   font-size: 14px;
   line-height: 1.6;
@@ -480,9 +525,29 @@ button:hover {
 ================================ */
 .copy-btn {
   margin-top: 16px;
-  background: linear-gradient(135deg, #ffffff, #dddddd);
+  background: var(--btn-light);
   color: #000000;
   font-weight: 700;
+}
+
+/* ===============================
+   FEEDBACK
+================================ */
+.feedback {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+  opacity: .85;
+}
+
+.feedback a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.feedback a:hover {
+  text-decoration: underline;
 }
 
 /* ===============================
@@ -490,21 +555,4 @@ button:hover {
 ================================ */
 .hidden {
   display: none;
-}
-
-.feedback {
-  margin-top: 30px;
-  text-align: center;
-  font-size: 14px;
-  opacity: 0.85;
-}
-
-.feedback a {
-  color: #a100ff;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.feedback a:hover {
-  text-decoration: underline;
 }

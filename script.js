@@ -60,13 +60,21 @@
 //   document.getElementById("output").classList.add("hidden");
 // }
 
+// function toggleTheme() {
+//   document.body.classList.toggle("light");
+//   const isLight = document.body.classList.contains("light");
+
+//   localStorage.setItem("theme", isLight ? "light" : "dark");
+//   document.getElementById("themeIcon").textContent = isLight ? "☀️" : "🌙";
+// }
+
 function toggleTheme() {
   document.body.classList.toggle("light");
-  const isLight = document.body.classList.contains("light");
 
-  localStorage.setItem("theme", isLight ? "light" : "dark");
-  document.getElementById("themeIcon").textContent = isLight ? "☀️" : "🌙";
+  const toggle = document.querySelector(".theme-toggle");
+  toggle.textContent = document.body.classList.contains("light") ? "🌞" : "🌙";
 }
+
 
 // Load saved theme or system preference
 (function initTheme() {
