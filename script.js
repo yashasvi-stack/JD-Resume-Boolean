@@ -128,11 +128,18 @@ function renderOutput(data) {
 }
 
 function copyBoolean() {
-  navigator.clipboard.writeText(
-    document.getElementById("final_boolean").textContent
-  );
+  const booleanText =
+    document.getElementById("final_boolean").innerText.trim();
+
+  if (!booleanText) {
+    alert("Nothing to copy");
+    return;
+  }
+
+  navigator.clipboard.writeText(booleanText);
   alert("Boolean copied!");
 }
+
 
 function refreshUI() {
   document.getElementById("jd").value = "";

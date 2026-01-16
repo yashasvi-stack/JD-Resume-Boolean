@@ -148,8 +148,18 @@
 
       <div class="final">
         <h3>Final Boolean</h3>
-        <pre id="final_boolean"></pre>
-        <button class="copy-btn" onclick="copyBoolean()">Copy Boolean</button>
+        <!-- <pre id="final_boolean"></pre>
+        <button class="copy-btn" onclick="copyBoolean()">Copy Boolean</button> -->
+
+        <pre id="final_boolean" contenteditable="true" class="boolean-editor"
+     spellcheck="false"
+     title="Click to edit Boolean before copying"></pre>
+
+<div class="boolean-actions">
+  <span class="edit-hint">Click to edit before copying</span>
+  <button class="copy-btn" onclick="copyBoolean()">Copy Boolean</button>
+</div>
+
       </div>
 
     </section>

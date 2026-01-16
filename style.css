@@ -592,3 +592,41 @@ body.light .refresh-btn,
 body.light .copy-btn {
   color: #fbf7f7;
 }
+
+
+/* ===============================
+   BOOLEAN EDITOR
+================================ */
+.boolean-editor {
+  outline: none;
+  cursor: text;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  min-height: 60px;
+}
+
+.boolean-editor:focus {
+  border-color: #a100ff;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Action row */
+.boolean-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.edit-hint {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* Light mode support */
+body.light .boolean-editor {
+  background: #f4f4f4;
+  border-color: #999;
+}
