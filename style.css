@@ -452,7 +452,7 @@ button:hover {
 
 .refresh-btn {
   background: var(--btn-light);
-  color: #f6f2f2;
+  color: #140202;
   box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
 
@@ -501,7 +501,7 @@ button:hover {
   border-radius: 20px;
   background: linear-gradient(
     135deg,
-    rgba(161,0,255,.35),
+   rgb(121 128 190 / 73%),
     rgba(95,0,216,.35)
   );
 }
@@ -526,7 +526,7 @@ button:hover {
 .copy-btn {
   margin-top: 16px;
   background: var(--btn-light);
-  color: #000000;
+  color: #fafafa;
   font-weight: 700;
 }
 
