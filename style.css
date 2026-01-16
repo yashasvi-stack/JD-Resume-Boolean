@@ -630,3 +630,50 @@ body.light .boolean-editor {
   background: #f4f4f4;
   border-color: #999;
 }
+
+
+/* ===============================
+   NAUKRI SHORTCUT
+================================ */
+.naukri-link {
+  position: absolute;
+  top: 22px;
+  right: 70px; /* keeps space for theme toggle */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 22px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  background: linear-gradient(135deg, #1c75bc, #005aa7);
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(28, 117, 188, 0.45);
+  transition: all 0.25s ease;
+}
+
+.naukri-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(28, 117, 188, 0.65);
+}
+
+/* Naukri "N" badge */
+.naukri-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #1c75bc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+/* Light mode support */
+body.light .naukri-link {
+  background: linear-gradient(135deg, #005aa7, #003f7f);
+}
