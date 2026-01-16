@@ -421,9 +421,7 @@ input[type="file"] {
   color: var(--text-main);
 }
 
-/* ===============================
-   BUTTONS
-================================ */
+
 .btn-row {
   margin-top: 18px;
   display: flex;

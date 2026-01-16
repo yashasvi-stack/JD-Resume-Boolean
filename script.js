@@ -68,7 +68,6 @@ function toggleTheme() {
   document.getElementById("themeIcon").textContent = isLight ? "☀️" : "🌙";
 }
 
-// Load saved theme
 (function initTheme() {
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "light") {
