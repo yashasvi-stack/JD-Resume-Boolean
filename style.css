@@ -556,3 +556,41 @@ button:hover {
 .hidden {
   display: none;
 }
+
+
+/* ===============================
+   LIGHT MODE
+================================ */
+body.light {
+  background: radial-gradient(circle at top, #f5f5f5, #e6e6e6);
+  color: #111;
+}
+
+body.light .container {
+  background: #ffffff;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+}
+
+body.light textarea {
+  background: #fafafa;
+  color: #111;
+  border: 1px solid #ccc;
+}
+
+body.light .card {
+  background: #f9f9f9;
+  border-left-color: #5f00d8;
+}
+
+body.light .final {
+  background: linear-gradient(135deg, #e0ccff, #d1b3ff);
+}
+
+body.light button {
+  color: #fff;
+}
+
+body.light .refresh-btn,
+body.light .copy-btn {
+  color: #000;
+}
