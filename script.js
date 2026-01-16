@@ -60,13 +60,13 @@
 //   document.getElementById("output").classList.add("hidden");
 // }
 
-// function toggleTheme() {
-//   document.body.classList.toggle("light");
-//   const isLight = document.body.classList.contains("light");
+function toggleTheme() {
+  document.body.classList.toggle("light");
+  const isLight = document.body.classList.contains("light");
 
-//   localStorage.setItem("theme", isLight ? "light" : "dark");
-//   document.getElementById("themeIcon").textContent = isLight ? "☀️" : "🌙";
-// }
+  localStorage.setItem("theme", isLight ? "light" : "dark");
+  document.getElementById("themeIcon").textContent = isLight ? "☀️" : "🌙";
+}
 
 
 // Load saved theme or system preference
